@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fafa Collaboration</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'EB Garamond', serif;
+            background: linear-gradient(135deg, #232323, #2a2a2a);
+            color: #FCFCFC;
+            line-height: 1.6;
+            padding: 5vw;
+            max-width: 800px;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 1em;
+            font-weight: 700;
+        }
+        p, ul {
+            font-size: 1.2em;
+            margin-bottom: 1.5em;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 0.5em;
+        }
+        .highlight {
+            color: #CD0633;
+            font-weight: 700;
+        }
+        .section {
+            margin-bottom: 2em;
+        }
+        .dropdown {
+            margin-bottom: 1em;
+        }
+        .dropdown-toggle {
+            cursor: pointer;
+            border-bottom: 1px solid #FCFCFC;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            padding: 1em 0;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fafa Collaboration</h1>
+    <div class="section">
+        <p>Collaboration is hard. International collaboration? <span class="highlight">Fafa makes it easy.</span> We offer three interlinked services for international collaborators:</p>
+        <div class="dropdown">
+            <p class="dropdown-toggle">(1) collaborative ownership</p>
+            <div class="dropdown-content">
+                <p>Standard ownership of art is exclusive: when you buy my work, I don't own it anymore. Fafa lets creators, curators, gallerists, collectors and patrons collaboratively own art.</p>
+            </div>
+        </div>
+        <p>(2) consultation and mediation</p>
+        <p>(3) provenant inventory</p>
+    </div>
+    <div class="section">
+        <p>There are three ways to Fafa:</p>
+        <ul>
+            <li>collaborator,</li>
+            <li>patron,</li>
+            <li>partner.</li>
+        </ul>
+    </div>
+
+    <script>
+        document.querySelector('.dropdown-toggle').addEventListener('click', function() {
+            var content = this.nextElementSibling;
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+</body>
+</html>
