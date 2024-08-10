@@ -3,94 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fafa Services</title>
+    <title>Fafa Platform</title>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
             font-family: 'EB Garamond', serif;
-            background-color: #000000;
-            color: #FFFFFF;
-            line-height: 1.4;
-            padding: 5vw;
-            max-width: 1200px;
-            margin: 0 auto;
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
             min-height: 100vh;
+            max-width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 20px;
+            background-color: #000; /* Placeholder for logo */
+        }
+        .login {
+            font-size: 18px;
+        }
+        .content {
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            max-width: 600px;
+            margin: 0 auto;
         }
-        p, ul {
-            font-size: 2.4em;
-            margin-bottom: 0.75em;
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        p {
+            font-size: 24px;
+            margin-bottom: 20px;
+            line-height: 1.4;
         }
         ul {
-            list-style-type: none;
-            padding: 0;
+            list-style-type: disc;
+            padding-left: 30px;
+            margin: 0 0 20px 0;
         }
         li {
-            margin-bottom: 0.25em;
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: bold;
         }
         .highlight {
             color: #CD0633;
-            font-weight: 700;
         }
-        .section {
-            margin-bottom: 1em;
+        a {
+            color: #CD0633;
+            text-decoration: none;
         }
-        .dropdown {
-            margin-bottom: 0.5em;
+        a:hover {
+            text-decoration: underline;
         }
-        .dropdown-toggle {
-            cursor: pointer;
-            border-bottom: 2px solid #FFFFFF;
-            display: inline-block;
-        }
-        .dropdown-content {
-            display: none;
-            padding: 0.5em 0;
-            font-size: 0.9em;
-            opacity: 0.9;
+        @media (max-width: 600px) {
+            .content {
+                font-size: 18px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            p, li {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="section">
-        <p>Collaboration is hard. International collaboration? Almost impossible. Fafa makes it easy. We think this will save the world -- but for now we have three offerings to make international collaboration delightful:</p>
-        <div class="dropdown">
-            <p class="dropdown-toggle">(1) collaborative ownership</p>
-            <div class="dropdown-content">
-                <p>Standard ownership of art is exclusive: when you buy my work, I don't own it anymore. Fafa lets creators, curators, gallerists, collectors and patrons collaboratively own art.</p>
-            </div>
-        </div>
-        <div class="dropdown">
-            <p class="dropdown-toggle">(2) consultation and mediation</p>
-            <div class="dropdown-content">
-                <p>Placeholder content for consultation and mediation services.</p>
-            </div>
-        </div>
-        <div class="dropdown">
-            <p class="dropdown-toggle">(3) provenant inventory</p>
-            <div class="dropdown-content">
-                <p>Placeholder content for provenant inventory services.</p>
-            </div>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo"></div>
+            <div class="login">LOGIN</div>
+        </nav>
+        <div class="content">
+            <h1><strong>Fafa</strong> is a platform for collaboration: mostly international, mostly experimental, and persistently complex.</h1>
+            <p>It offers:</p>
+            <ul>
+                <li>Collaborative Ownership</li>
+                <li>Consultation and Mediation</li>
+                <li>Provenant Inventory</li>
+            </ul>
+            <p>There are <a href="#" class="highlight">five ongoing Fas</a> on the platform.</p>
         </div>
     </div>
-    <div class="section">
-        <p>There are three ways to Fafa:</p>
-        <ul>
-            <li>collaborator,</li>
-            <li>patron,</li>
-            <li>partner.</li>
-        </ul>
-    </div>
-
-    <script>
-        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-            toggle.addEventListener('click', function() {
-                var content = this.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
-            });
-        });
-    </script>
 </body>
 </html>
